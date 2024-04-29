@@ -101,8 +101,8 @@ class Ball(pygame.sprite.Sprite):
         self.rect.y += self.speed * direction
 
     def reset(self):
-        self.rect.x = 0
-        self.rect.y = 255
+        self.rect.x = (500 - self.width) / 2
+        self.rect.y = (700 - self.height) / 2
         self.color = random.choice(self.colors)
         self.y_direction = random.choice([1, -1])
-        self.x_direction = 1
+        self.x_direction = random.choice([1, -1])
